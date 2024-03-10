@@ -70,16 +70,14 @@
     box-sizing: border-box;
 }
 body{
-    background: url(./assets/images/bgo.webp);
-    
-    background: linear-gradient(to bottom, #e4defe, #fbfafe), url(../assets/images/bgo.webp); background-size: cover; background-position: center center;
-  /* background: linear-gradient(to bottom, #e4defe, #fbfafe),
-  /* Image layer */
-  /* url(../assets/images/bgo.webp); */
+    background: url(../../assets/images/bgo.webp),linear-gradient(to bottom, #e4defe, #fbfafe);
+  
 
 /* Background size and positioning */
 background-size: cover;
-background-position: center;
+background-position-x: right;
+background-repeat: no-repeat;
+/* background-position: left; */
 
     min-height: 100vh;
     overflow: hidden;
