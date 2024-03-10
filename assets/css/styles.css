@@ -80,7 +80,7 @@ background-repeat: no-repeat;
 /* background-position: left; */
 
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 main{
     max-width: 100%;
