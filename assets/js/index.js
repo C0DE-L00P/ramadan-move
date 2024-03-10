@@ -32,6 +32,7 @@ async function makePostcard(event) {
 
   frontscreen.style.display = 'block'
   frontscreen.classList.toggle('blink')
+  document.querySelector('canvas').style.height = '571px'
   
   setTimeout(() => {
     modal.style.display = 'grid';

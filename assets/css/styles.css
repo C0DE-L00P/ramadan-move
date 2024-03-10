@@ -70,7 +70,17 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(to bottom, #e4defe,#fbfafe);
+    background: url(./assets/images/bgo.webp);
+    
+    background: linear-gradient(to bottom, #e4defe, #fbfafe), url(../assets/images/bgo.webp); background-size: cover; background-position: center center;
+  /* background: linear-gradient(to bottom, #e4defe, #fbfafe),
+  /* Image layer */
+  /* url(../assets/images/bgo.webp); */
+
+/* Background size and positioning */
+background-size: cover;
+background-position: center;
+
     min-height: 100vh;
     overflow: hidden;
 }
@@ -92,6 +102,11 @@ p{
     font-size: large;
     margin-bottom: 0;
     line-height: 1.8rem;
+}
+@media screen and (max-width: 456px) {
+    p{
+    font-size: medium;
+    }
 }
 
 input{
