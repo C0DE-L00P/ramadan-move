@@ -1,0 +1,235 @@
+
+/* @font-face {
+    font-family: 'Neo Sans Arabic Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neo Sans Arabic Regular'), url('../font/Neo Sans Arabic Regular.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Neo Sans Arabic Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neo Sans Arabic Regular'), url('../font/NeoSansArabic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Neo Sans Arabic Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neo Sans Arabic Light'), url('../font/NeoSansArabicLight.woff') format('woff');
+    }
+     */
+
+    @font-face {
+    font-family: 'Neo Sans Arabic Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neo Sans Arabic Medium'), url('../font/NeoSansArabicMedium.woff') format('woff');
+    }
+    
+    /* @font-face {
+    font-family: 'Neo Sans Arabic Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neo Sans Arabic Bold'), url('../font/NeoSansArabicBold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Neo Sans Arabic Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neo Sans Arabic Black'), url('../font/NeoSansArabicBlack.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Neo Sans Arabic Ultra';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neo Sans Arabic Ultra'), url('../font/NeoSansArabicUltra.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Neo Sans Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neo Sans Medium'), url('../font/Neo_Sans_Medium.woff') format('woff');
+    } */
+
+
+*{
+    font-family: 'Neo Sans Arabic Medium', sans-serif ;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to bottom, #e4defe,#fbfafe);
+    min-height: 100vh;
+    overflow: hidden;
+}
+main{
+    max-width: 100%;
+    padding-inline: 24px;
+    width: 500px;
+    margin-inline: auto;   
+    position: relative;
+}
+.logo-img{
+    width: 180px;
+}
+hr{
+    border-color: #a38cfe;
+    margin-block: 8px;
+}
+p{
+    font-size: large;
+    margin-bottom: 0;
+    line-height: 1.8rem;
+}
+
+input{
+    display: block;
+    border: none;
+    background-color: #a38cfe;
+    border-radius: 4px;
+    padding-inline: 24px;
+    padding-block: 8px;
+    color: black;
+}
+input:focus{
+    border-color:transparent;   
+    outline-color:#6a4991; 
+}
+
+button{ 
+    display: block;
+    border: none;
+    cursor: pointer;
+    margin-block: 4px;
+    background:linear-gradient(to left, #6a4991, #9074fd);
+    border-radius: 4px;
+    padding-inline: 24px;
+    padding-block: 8px;
+    font-weight: 500;
+    color: white;
+}
+
+main#the_canvas_element_id.bg{
+    background-image: url(../images/bg.webp) !important;
+    background-size: cover;
+}
+
+.blink{
+    animation: flashlight 1s linear forwards;
+  }
+  
+  .frontscreen{
+    background: white;
+    opacity: 0;
+    z-index: 3;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+/* MODAL */
+
+.modal-btns{
+    background-color: rgba(0, 0, 0, 0.604);
+    padding-inline: 24px;
+    padding-block: 6px;
+    border-radius: 8px 0 0 0;
+    width: max-content;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .modal-btns button, .modal-btns a{
+    all: unset;
+    background: transparent;
+    margin-inline-end: 8px; 
+    color: white;
+    cursor: pointer;
+  }
+  
+  .modal-btns button:hover{
+    filter: brightness(0.8);
+  }
+  .modal-btns button:active{
+    filter: brightness(0.7);
+  }
+  
+  #modal{
+    background: rgba(0, 0, 0, 0.396);
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 5;
+    place-content: center;
+  }
+  #modal > .card{
+    margin-inline: auto;
+    height: max-content;
+    max-width: 90%;
+    position: relative;
+    cursor: initial;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #modal > .card canvas{
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  
+@keyframes flashlight {
+    55%,
+    70% {
+      opacity: 0;
+    }
+  
+    56% {
+      opacity: 1;
+    }
+  }
+  footer{
+    padding-bottom: 16px;
+  }
+  
+  /* LOADER */
+  
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 20px;
+    aspect-ratio: 1;
+    background: #fbfbfb;
+    box-shadow: 0 0 60px 15px #6a4991;
+    transform: translate(-80px);
+    clip-path: inset(0);
+    animation:
+      l4-1 0.5s ease-in-out infinite alternate,
+      l4-2 1s   ease-in-out infinite;
+  }
+  @keyframes l4-1 {
+    100% {transform: translateX(80px)}
+  }
+  @keyframes l4-2 {
+     33% {clip-path: inset(0 0 0 -100px)}
+     50% {clip-path: inset(0 0 0 0)     }
+     83% {clip-path: inset(0 -100px 0 0)}
+  }
+
+  .card-img{
+    height: max-content;
+  }
